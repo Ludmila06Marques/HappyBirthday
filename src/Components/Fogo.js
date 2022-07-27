@@ -13,6 +13,7 @@ import img8 from "../imgFogo/8.JPG"
 import img9 from "../imgFogo/9.JPG"
 import img10 from "../imgFogo/10.jpg"
 import img11 from "../imgFogo/11.jpg"
+import rir from "../imgFogo/rir.png"
 
 export default function Fogo(){
 
@@ -67,7 +68,7 @@ export default function Fogo(){
         </Group>
         
         <GroupOther visualizar={other} >
-            <Titulo><TextoTitulo>Pediu dica ? Entao coloquei outra senha hihihi
+            <Titulo><TextoTitulo> <img src={rir} /> Achou que ia ser facil né HAHAHAHAHAHAH
                 </TextoTitulo></Titulo>
                 <Validar  type="password"   placeholder="Outra senha hihi"   onChange={(e)=> setOutra(e.target.value)} value={outra}/>
         <Abrir onClick= {verificaDnv} >Entrar</Abrir>
@@ -91,7 +92,7 @@ display:${props => props.visualizar  ? "flex": "none"};
 flex-direction: column;
 justify-content: center;
 align-items: center;
-margin-top: 100px;
+margin-top: 50px;
 `
 
 const Validar=styled.input`
@@ -110,6 +111,10 @@ text-align: center;
 
 h2{
 
+}
+img{
+    width: 100px;
+    height: auto;
 }
 `
 
