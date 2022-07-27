@@ -18,14 +18,25 @@ export default function Fogo(){
 
    
     const [data , setData]=useState("")
+    const [outra , setOutra]=useState("")
     const [visible , setVisible]=useState(true)
     const [view , setView]=useState(false)
+    const [other , setOther]=useState(false)
     function verifica(){
         if(data=="praiadasconchas"){
             setVisible(false)
+            setOther(true)
+            //setView(true)
+        }else{
+            alert("Senha incorreta hem !!")
+        }
+    }
+    function verificaDnv(){
+        if(outra=="promessadededinho"){
+            setOther(false)
             setView(true)
         }else{
-            alert("Data incorreta hem !!")
+            alert("Senha incorreta hem !!")
         }
     }
 
@@ -55,12 +66,41 @@ export default function Fogo(){
            </Titulo>
         </Group>
         
+        <GroupOther visualizar={other} >
+            <Titulo><TextoTitulo>Pediu dica ? Entao coloquei outra senha hihihi
+                </TextoTitulo></Titulo>
+                <Validar  type="password"   placeholder="Outra senha hihi"   onChange={(e)=> setOutra(e.target.value)} value={outra}/>
+        <Abrir onClick= {verificaDnv} >Entrar</Abrir>
+        <Titulo><TextoTitulo>Dicas : 
+           <h2> -É algo muito importante</h2>
+           <h2>.................</h2> 
+           </TextoTitulo>
+           </Titulo>
+        </GroupOther>
+        
+
+        
         {sorteada == null ?  <Images onClick={sortear} type={view} ><Foto> <h1>Clique aqui para sortear uma foto fogosa</h1></Foto></Images> : <Images onClick={sortear} type={view} ><Foto>  <img src={sorteada} />  </Foto></Images> }
        
         <Footer/>
         </>)
 }
 
+const GroupOther =styled.div`
+display:${props => props.visualizar  ? "flex": "none"};
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 100px;
+`
+
+const Validar=styled.input`
+width: 300px;
+height: 52px;
+border-radius: 8px;
+border: 1px solid white;
+text-align: center;
+`
 
 const TextoTitulo=styled.h1`
 color: black;
