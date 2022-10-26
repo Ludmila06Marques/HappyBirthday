@@ -2,18 +2,8 @@ import Back from "./Back"
 import Footer from "./Footer"
 import styled from "styled-components"
 import { useState } from "react"
-import img1 from "../imgFogo/1.jpg"
-import img2 from "../imgFogo/2.jpg"
-import img3 from "../imgFogo/3.jpg"
-import img4 from "../imgFogo/4.jpg"
-import img5 from "../imgFogo/5.JPG"
-import img6 from "../imgFogo/6.JPG"
-import img7 from "../imgFogo/7.JPG"
-import img8 from "../imgFogo/8.JPG"
-import img9 from "../imgFogo/9.JPG"
-import img10 from "../imgFogo/10.jpg"
-import img11 from "../imgFogo/11.jpg"
 import rir from "../imgFogo/rir.png"
+import insira from "../imgNos/insira.png"
 
 export default function Fogo(){
 
@@ -24,7 +14,7 @@ export default function Fogo(){
     const [view , setView]=useState(false)
     const [other , setOther]=useState(false)
     function verifica(){
-        if(data=="praiadasconchas"){
+        if(data=="umasenha"){
             setVisible(false)
             setOther(true)
             //setView(true)
@@ -33,7 +23,7 @@ export default function Fogo(){
         }
     }
     function verificaDnv(){
-        if(outra=="promessadededinho"){
+        if(outra=="outrasenha"){
             setOther(false)
             setView(true)
         }else{
@@ -43,10 +33,13 @@ export default function Fogo(){
 
 
     const [sorteada , setSorteada]=useState()
-    const array=['/static/media/1.fdcf496c.jpg', '/static/media/2.c2fc526d.jpg', '/static/media/3.a3578889.jpg ','/static/media/4.94bbbf80.jpg', '/static/media/5.c1716d06.JPG ','/static/media/6.1ca7750d.JPG', '/static/media/7.d5d1d0f6.JPG ', '/static/media/8.ccbd9066.JPG',' /static/media/9.c042bbbc.JPG', '/static/media/10.7f6b2e8b.jpg', '/static/media/11.43a37a95.jpg']
-    function sortear(){
+  
+  
+    const array=[insira]
+
+  function sortear(){
      
-        const sorteado= array[Math.floor(Math.random() * array.length)];
+       const sorteado= array[Math.floor(Math.random() * array.length)];
       setSorteada(sorteado)
       
    
@@ -56,14 +49,13 @@ export default function Fogo(){
         <Back/>
         
         <Group type={visible} >
-            <Titulo><TextoTitulo>Tá ficando quente aqui hem !! Descubra a senha e você ganhará uma surpresinha
+            <Titulo><TextoTitulo> Descubra a senha e você ganhará uma surpresinha
                 </TextoTitulo></Titulo>
         <InputSenha type="password" placeholder="Descubra a senha e adentrarás"  onChange={(e)=> setData(e.target.value)} value={data}/>
         <Abrir onClick= {verifica} >Entrar</Abrir>
-        <Titulo><TextoTitulo>Dicas : 
-           <h2> -Foi no perigo</h2>
-           <h2>-Longe de casa </h2> 
-           <h2>  -Salgadinho</h2>  </TextoTitulo>
+        <Titulo><TextoTitulo>Dica : 
+           <h2>-Alguma dica </h2> 
+     </TextoTitulo>
            </Titulo>
         </Group>
         
@@ -73,7 +65,7 @@ export default function Fogo(){
                 <Validar  type="password"   placeholder="Outra senha hihi"   onChange={(e)=> setOutra(e.target.value)} value={outra}/>
         <Abrir onClick= {verificaDnv} >Entrar</Abrir>
         <Titulo><TextoTitulo>Dicas : 
-           <h2> -É algo muito importante</h2>
+           <h2> -Outra dica</h2>
            <h2>.................</h2> 
            </TextoTitulo>
            </Titulo>
@@ -81,7 +73,7 @@ export default function Fogo(){
         
 
         
-        {sorteada == null ?  <Images onClick={sortear} type={view} ><Foto> <h1>Clique aqui para sortear uma foto fogosa</h1></Foto></Images> : <Images onClick={sortear} type={view} ><Foto>  <img src={sorteada} />  </Foto></Images> }
+        {sorteada == null ?  <Images onClick={sortear} type={view} ><Foto> <h1>Clique aqui para sortear uma foto </h1></Foto></Images> : <Images onClick={sortear} type={view} ><Foto>  <img src={sorteada} />  </Foto></Images> }
        
         <Footer/>
         </>)

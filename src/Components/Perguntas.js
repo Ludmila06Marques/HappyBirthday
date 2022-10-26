@@ -6,7 +6,7 @@ import Love from "../Img/love.png"
 import { useState } from "react"
 
 export default function Perguntas(){
-    const array=[{pergunta:"Quando comecamos a namorar ?" , resposta:"23/01/2019"},{pergunta:"Onde foi nosso primeiro encontro?" , resposta:"No +acai"},{pergunta:"Qual minha cor preferida ?" , resposta:"roxo"},{pergunta:"Qual o momento mais especial que temos juntos" , resposta:"Primeira vez que eu voltei da Espanha"},{pergunta:"Qual melhor posicao de sexo" , resposta:"Ladin hihi"},{pergunta:"Qual é o tipo de comida que mais comemos juntos?" , resposta:"arroz e feijao"} ,{pergunta:"Nós dividimos algum sonho?" , resposta:"Viajar o mundo"} ,{pergunta:"O que faz de você um bom namorado?" , resposta:"Parceria e respeito"} ,{pergunta:"Qual apelidinho nosso que você adora, mas tem vergonha de dizer em público?" , resposta:"momo"} ,{pergunta:"Quais foram as primeiras impressões que tiveste de mim? " , resposta:"hummm que cara gostoso"} ,{pergunta:"Quem é mais provável de sentir ciúme mais rápido?" , resposta:"Gustavo"} ,{pergunta:"Você lembra qual foi o primeiro filme que vimos juntos?" , resposta:"Wifi Ralph"} ,{pergunta:"Quais músicas você escuta e se lembra de mim?" , resposta:"Saudade de vc"} ,{pergunta:"Onde nos beijamos pela primeira vez?" , resposta:"No carro dos seus pais"} ,{pergunta:"Qual foi a sua maior lição de relacionamentos anteriores?" , resposta:"Aprender a respeitar e a me dar valor"} ,{pergunta:"O que sente falta da vida de solteiro?" , resposta:"De nada"} ,{pergunta:"O que você mais ama fazer comigo?" , resposta:"Amo estar com vc"}]
+    const array=[{pergunta:"PERGUNTE ALGO?" , resposta:"COLOQUE A RESPOSTA"}]
     const [sorteada , setSorteada]=useState([])
     const [virarCarta , setVirarCarta]=useState(false)
 
@@ -34,7 +34,7 @@ setVirarCarta(true)
         </Cabecalho>
         {sorteada.length==0 ?  <Container onClick={sortear}>
        <img src={Love}/>
-       <Texto>Clique aqui para sortear uma frase</Texto>
+       <Texto>Clique aqui para sortear uma pergunta</Texto>
    </Container> :
     <Container >
     <img src={Love}/>
