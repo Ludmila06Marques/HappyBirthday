@@ -9,15 +9,15 @@ In it , you can put pictures , phrases , and leave a written letter</h3>
 
 
 <div display="inline" >
-<img src="./src/Img/image1.png" width="50%" margin="0" />  
-<img src="./src/Img/image2.png" width="50%" margin="0" />  
-<img src="./src/Img/image3.png" width="50%" margin="0" />  
-<img src="./src/Img/image4.png" width="50%" margin="0" />  
-<img src="./src/Img/image5.png" width="50%" margin="0" />  
-<img src="./src/Img/image6.png" width="50%" margin="0" />  
-<img src="./src/Img/image7.png" width="50%" margin="0" />  
-<img src="./src/Img/image8.png" width="50%" margin="0" />  
-<img src="./src/Img/image9.png" width="50%" margin="0" />  
+<img src="./src/Img/image1.png" width="30%" margin="0" />  
+<img src="./src/Img/image2.png" width="30%" margin="0" />  
+<img src="./src/Img/image3.png" width="30%" margin="0" />  
+<img src="./src/Img/image4.png" width="30%" margin="0" />  
+<img src="./src/Img/image5.png" width="30%" margin="0" />  
+<img src="./src/Img/image6.png" width="30%" margin="0" />  
+<img src="./src/Img/image7.png" width="30%" margin="0" />  
+<img src="./src/Img/image8.png" width="30%" margin="0" />  
+<img src="./src/Img/image9.png" width="30%" margin="0" />  
 </div># HappyBirthday
 # HappyBirthday
 # HappyBirthday
